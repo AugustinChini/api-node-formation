@@ -1,6 +1,7 @@
 import express from "express";
 import bodyparser from "body-parser";
 import { TodoRoutes } from "./todo/todo.routes.config";
+import { ColorRoutes } from "./color/color.routes.config";
 
 const app = express();
 const routes: any = [];
@@ -28,6 +29,7 @@ app.use(function (err: any, req: any, res: any, next: any) {
 
 // création des routes
 routes.push(new TodoRoutes(app));
+routes.push(new ColorRoutes(app));
 
 app.get("/", (req: any, res: any) => {
   res.send({

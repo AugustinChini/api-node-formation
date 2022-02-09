@@ -1,11 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { Todo } from "../model/todo";
-
-interface TodoAttributes {
-  id: string;
-  title: string;
-  completed: boolean;
-}
+import { Todo, TodoAttributes } from "../model/todo";
 
 export class TodoDao {
   private static instance: TodoDao;
